@@ -12,14 +12,16 @@ export default function Result(props) {
             <br />
             <br />
             <List dense={true}>
-                {props.listOfWords.map((word) => (
-                    <>
-                        <ListItem key={`item-${word}`}>
-                            <ListItemText primary={`${word}`} />
-                        </ListItem>
-                        <Divider variant="fullWidth" component="li" />
-                    </>
-                ))}
+                {props.listOfWords.map((word) => {
+                    return (
+                        <>
+                            <ListItem key={`item-${word}`}>
+                                <ListItemText primary={`${word}`} />
+                            </ListItem>
+                            <Divider variant="fullWidth" component="li" />
+                        </>
+                    )
+                })}
             </List>
         </Box>
     );
